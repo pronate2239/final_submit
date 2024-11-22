@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>미로찾기 게임</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='game.css') }}">
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-header">
+            <div class="game-info">
+                <span>난이도: {% if level == 1 %}초급{% elif level == 2 %}중급{% else %}고급{% endif %}</span>
+            </div>
+            <button id="backButton" onclick="window.location.href='/normal'">돌아가기</button>
+        </div>
+        <div id="maze" class="maze"></div>
+    </div>
+
+    <script>
+        const GAME_LEVEL = parseInt("{{ level }}") || 1;
+    </script>
+    <script src="{{ url_for('static', filename='game.js') }}"></script>
+</body>
+</html> 

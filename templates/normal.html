@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>난이도 선택</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="index-container">
+        <h1>난이도 선택</h1>
+        <div class="maze-grid">
+            <!-- 초급 미로 -->
+            <div class="maze-card" onclick="window.location.href='/game/1'">
+                <div class="maze-info">
+                    <h3>초급 미로</h3>
+                    <p>크기: 25x25</p>
+                    <span class="difficulty easy">쉬움</span>
+                </div>
+            </div>
+
+            <!-- 중급 미로 -->
+            <div class="maze-card" onclick="window.location.href='/game/2'">
+                <div class="maze-info">
+                    <h3>중급 미로</h3>
+                    <p>크기: 50x50</p>
+                    <span class="difficulty medium">보통</span>
+                </div>
+            </div>
+
+            <!-- 고급 미로 -->
+            <div class="maze-card" onclick="window.location.href='/game/3'">
+                <div class="maze-info">
+                    <h3>고급 미로</h3>
+                    <p>크기: 100x100</p>
+                    <span class="difficulty hard">어려움</span>
+                </div>
+            </div>
+        </div>
+        <button class="back-button" onclick="window.location.href='/'">돌아가기</button>
+    </div>
+</body>
+</html> 
